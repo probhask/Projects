@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container{
+    height: 100vh;
+    background: #f53192 linear-gradient(#f53192 50%,#ff8192 , #fff192 98%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-div{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0, 0, 0, 0.6)) ,url("wallpaper1.jpg") ;
+    background-size: cover;
+
+    width: 600px;
+    height: 350px;
+    padding: 30px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.count-timer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.count-timer .time-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* width: 450px; */
+    width: 80%;
+    padding: 20px 10px;
+}
+.time, .time-box p{
+    /* width: 100px;
+    height: 130px; */
+    margin: 10px;
+    color: #f53192;
+    font-size: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.time-box p{
+    font-size: 60px;
+}
+.time-box input{
+    width: 100px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.time-box input:focus-visible,input:hover{
+    text-shadow: 2px 2px 20px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    appearance: none;
+    margin: 0;
+    text-align: center;
+}
+
+.count-timer .operation{
+    margin-top: 30px;
+    width: 200px;
+    /* height: 50px; */
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.operation div{
+    height: 55px;
+    width: 55px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #f53192;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(245, 49, 147, 0.9);
+}
+.operation i{
+    color: #f53192;
+    font-size: 40px;
+}
+
+/* POP UP .message */
+
+.popup{
+    width: 400px;
+    min-height: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 60px 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    align-content: space-evenly;
+    text-align: center;
+    padding: 20px 15px;
+    position: absolute;
+    top: 0;
+    left: calc(100vw - 50vw);
+    transform: translate(-50%,-50%) scale(0.5);
+    transition: transform 1s,top 1s;
+    visibility: hidden;
+
+}
+.pop-in{
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    top: 50%;
+}
+.popup div{
+    margin: 15px 4px;
+}
+
+.popup .button{
+    padding: 8px 10px;
+    background-color: coral;
+    font-size: 20px;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.sign i{
+    font-size: 100px;
+}
+.hidden{
+    display: none;
+}
